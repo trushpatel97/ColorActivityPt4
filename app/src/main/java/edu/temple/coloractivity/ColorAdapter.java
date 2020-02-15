@@ -53,7 +53,6 @@ public class ColorAdapter extends BaseAdapter {
         TextView txv=(TextView)convertView.findViewById(android.R.id.text1);
         txv.setBackgroundColor(colors.get(position));
         txv.setTextSize(20f);
-        txv.setTextColor(Color.parseColor("#FFFFFF"));
         txv.setText(getElementFromColors(position));
         return convertView;
     }

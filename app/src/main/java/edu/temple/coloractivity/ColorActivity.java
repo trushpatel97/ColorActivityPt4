@@ -21,25 +21,60 @@ public class ColorActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        View view;
+        final View newBackground;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Spinner spinner = findViewById(R.id.spinner);
+        final Spinner spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.myColors, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(
                 android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(new ColorAdapter(this));
-        view = this.getWindow().getDecorView();
+        newBackground = this.getWindow().getDecorView();
 
 
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position==0){
+                ArrayList<Integer> colors;
+                colors = new ArrayList<Integer>();
+                int retrieve []= getResources().getIntArray(R.array.myColors);
+                for(int i:retrieve)
+                {
+                    colors.add(i);
+                }
+                if(position == 0){
                     view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.silver);
+                }else if(position == 1){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.pink);
+                }else if(position == 2){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.red);
+                }else if(position == 3){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.orange);
+                }else if(position == 4){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.yellow);
+                }else if(position == 5){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.green);
+                }else if(position == 6){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.blue);
+                }else if(position == 7){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.indigo);
+                }else if(position == 8){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.violet);
+                }else if(position == 9){
+                    view.setBackgroundResource(R.color.white);
+                    newBackground.setBackgroundResource(R.color.brown);
                 }
             }
 

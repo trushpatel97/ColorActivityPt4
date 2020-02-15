@@ -26,7 +26,10 @@
         <item>@color/indigo</item>
         <item>@color/violet</item>
         <item>@color/brown</item>
+    </integer-array>
+    <integer-array name="whiteColor">
         <item>@color/white</item>
     </integer-array>
+
 
 </resources>
