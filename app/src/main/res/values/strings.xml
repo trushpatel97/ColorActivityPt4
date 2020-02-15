@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">ColorActivity</string>
-    <string-array name="list">
+    <string name="app_name">Color Activity</string>
+    <string-array name="myStrings">
+        <item>Silver</item>
+        <item>Pink</item>
         <item>Red</item>
         <item>Orange</item>
         <item>Yellow</item>
@@ -8,8 +10,6 @@
         <item>Blue</item>
         <item>Indigo</item>
         <item>Violet</item>
-        <item>Pink</item>
-        <item>Grey</item>
         <item>Brown</item>
     </string-array>
 </resources>
