@@ -52,7 +52,6 @@ public class ColorAdapter extends BaseAdapter {
         convertView=inflater.inflate(android.R.layout.simple_spinner_dropdown_item, null);
         TextView txv=(TextView)convertView.findViewById(android.R.id.text1);
         txv.setBackgroundColor(colors.get(position));
-        txv.setTextSize(20f);
         txv.setText(getElementFromColors(position));
         return convertView;
     }
