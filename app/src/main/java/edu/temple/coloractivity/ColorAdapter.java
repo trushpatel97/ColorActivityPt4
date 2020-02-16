@@ -42,7 +42,7 @@ public class ColorAdapter extends BaseAdapter {
     }
 
     public String getElementFromColors(int position){
-        String retrieve []=context.getResources().getStringArray(R.array.myColors);
+        String retrieve[] = context.getResources().getStringArray(R.array.myStrings);
         return retrieve[position];
     }
 
