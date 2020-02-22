@@ -26,6 +26,7 @@ public class PaletteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Palette Activity");
         final Spinner spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.myColors, android.R.layout.simple_spinner_item);
@@ -97,7 +98,7 @@ public class PaletteActivity extends AppCompatActivity {
                 }else if(position == 10){
                     view.setBackgroundResource(R.color.white);
                     Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
-                    i.putExtra("position",9);
+                    i.putExtra("position",10);
                     PaletteActivity.this.startActivity(i);
                 }
             }
