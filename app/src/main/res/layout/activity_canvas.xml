@@ -4,23 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PaletteActivity">
+    tools:context=".CanvasActivity">
 
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="180dp"
-        android:layout_height="25dp"
-        android:entries="@array/myStrings"
-        android:popupBackground="#FFFFFF"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="20dp"
+    <TextView
+        android:id="@+id/newColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

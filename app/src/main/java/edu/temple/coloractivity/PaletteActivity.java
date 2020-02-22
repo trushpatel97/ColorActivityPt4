@@ -3,6 +3,7 @@ package edu.temple.coloractivity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.session.PlaybackState;
 import android.os.Bundle;
@@ -19,12 +20,10 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 
-public class ColorActivity extends AppCompatActivity {
+public class PaletteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final View newBackground;
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Spinner spinner = findViewById(R.id.spinner);
@@ -35,51 +34,71 @@ public class ColorActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> stringNames = ArrayAdapter.createFromResource(this,R.array.myStrings, android.R.layout.simple_spinner_item);
         stringNames.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(new ColorAdapter(this));
-        newBackground = this.getWindow().getDecorView();
-
+        final boolean userSelected = false;
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ArrayList<Integer> colors;
-                colors = new ArrayList<Integer>();
-                int retrieve []= getResources().getIntArray(R.array.myColors);
-                for(int i:retrieve)
-                {
-                    colors.add(i);
-                }
-                view.setBackgroundResource(R.color.silver);
-
                 if(position == 0){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.silver);
-                }else if(position == 1){
+                }
+                else if(position == 1){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.pink);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",1);
+                    PaletteActivity.this.startActivity(i);
                 }else if(position == 2){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.red);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",2);
+                    PaletteActivity.this.startActivity(i);
+
                 }else if(position == 3){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.orange);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",3);
+                    PaletteActivity.this.startActivity(i);
+
                 }else if(position == 4){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.yellow);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",4);
+                    PaletteActivity.this.startActivity(i);
+
                 }else if(position == 5){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.green);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",5);
+                    PaletteActivity.this.startActivity(i);
+
                 }else if(position == 6){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.blue);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",6);
+                    PaletteActivity.this.startActivity(i);
+
                 }else if(position == 7){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.indigo);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",7);
+                    PaletteActivity.this.startActivity(i);
+
                 }else if(position == 8){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.violet);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",8);
+                    PaletteActivity.this.startActivity(i);
+
                 }else if(position == 9){
+                    view.setBackgroundResource(R.color.violet);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",9);
+                    PaletteActivity.this.startActivity(i);
+                }else if(position == 10){
                     view.setBackgroundResource(R.color.white);
-                    newBackground.setBackgroundResource(R.color.brown);
+                    Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
+                    i.putExtra("position",9);
+                    PaletteActivity.this.startActivity(i);
                 }
             }
 
@@ -88,8 +107,6 @@ public class ColorActivity extends AppCompatActivity {
 
             }
         });
-
-
     }
 
 }

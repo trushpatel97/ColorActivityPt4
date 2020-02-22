@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Color Activity</string>
     <string-array name="myStrings">
+        <item>Select a color</item>
         <item>Silver</item>
         <item>Pink</item>
         <item>Red</item>
