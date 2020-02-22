@@ -91,7 +91,7 @@ public class PaletteActivity extends AppCompatActivity {
                     PaletteActivity.this.startActivity(i);
 
                 }else if(position == 9){
-                    view.setBackgroundResource(R.color.violet);
+                    view.setBackgroundResource(R.color.white);
                     Intent i = new Intent(PaletteActivity.this, CanvasActivity.class);
                     i.putExtra("position",9);
                     PaletteActivity.this.startActivity(i);
