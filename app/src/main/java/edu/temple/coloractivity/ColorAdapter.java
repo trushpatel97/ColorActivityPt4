@@ -1,7 +1,11 @@
 package edu.temple.coloractivity;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +15,7 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ColorAdapter extends BaseAdapter {
     ArrayList<Integer> colors;
@@ -42,8 +47,16 @@ public class ColorAdapter extends BaseAdapter {
     }
 
     public String getElementFromColors(int position){
-        String retrieve[] = context.getResources().getStringArray(R.array.myStrings);
-        return retrieve[position];
+        String CurrentLang = Locale.getDefault().getLanguage();
+        if(CurrentLang.equals("es")){
+            String retrieve[] = context.getResources().getStringArray(R.array.myStrings);
+            return retrieve[position];
+        }else{
+            String retrieve[] = context.getResources().getStringArray(R.array.myStrings);
+            return retrieve[position];
+        }
+
+
     }
 
     @Override

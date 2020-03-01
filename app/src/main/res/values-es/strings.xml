@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Actividad de color</string>
+    <string name="Color">Color</string>
+    <string-array name="myStrings">
+        <item>Selecciona un color</item>
+        <item>Plata</item>
+        <item>Rosado</item>
+        <item>Rojo</item>
+        <item>Naranja</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Índigo</item>
+        <item>Violeta</item>
+        <item>Marrón</item>
+    </string-array>
+</resources>

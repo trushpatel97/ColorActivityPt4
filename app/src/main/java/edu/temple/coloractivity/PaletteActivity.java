@@ -18,6 +18,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 
 public class PaletteActivity extends AppCompatActivity {
@@ -26,16 +27,23 @@ public class PaletteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String CurrentLang = Locale.getDefault().getLanguage();
         setTitle("Palette Activity");
         final Spinner spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.myColors, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(
                 android.R.layout.simple_spinner_dropdown_item);
-        ArrayAdapter<CharSequence> stringNames = ArrayAdapter.createFromResource(this,R.array.myStrings, android.R.layout.simple_spinner_item);
-        stringNames.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        if(CurrentLang.equals("es")){
+            ArrayAdapter<CharSequence> stringNames = ArrayAdapter.createFromResource(this,R.array.myStrings, android.R.layout.simple_spinner_item);
+            stringNames.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        }else{
+            ArrayAdapter<CharSequence> stringNames = ArrayAdapter.createFromResource(this,R.array.myStrings, android.R.layout.simple_spinner_item);
+            stringNames.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        }
+
+
         spinner.setAdapter(new ColorAdapter(this));
-        final boolean userSelected = false;
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
