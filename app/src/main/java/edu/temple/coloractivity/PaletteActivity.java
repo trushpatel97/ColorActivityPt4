@@ -28,6 +28,7 @@ public class PaletteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         String CurrentLang = Locale.getDefault().getLanguage();
+
         setTitle("Palette Activity");
         final Spinner spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -48,8 +49,9 @@ public class PaletteActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                 if(position == 0){
-                    view.setBackgroundResource(R.color.white);
+                    System.out.println("Ignore this to make it shut up about no response");;
                 }
                 else if(position == 1){
                     view.setBackgroundResource(R.color.white);
