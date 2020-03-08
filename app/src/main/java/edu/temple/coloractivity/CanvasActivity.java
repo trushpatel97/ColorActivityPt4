@@ -34,9 +34,79 @@ public class CanvasActivity extends AppCompatActivity {
 
         Intent i = getIntent();
          int pos = i.getIntExtra("position",0);
+        if(pos == 1){
+            newBackground.setBackgroundResource(R.color.silver);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 2){
+            newBackground.setBackgroundResource(R.color.pink);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 3){
+            newBackground.setBackgroundResource(R.color.red);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 4){
+            newBackground.setBackgroundResource(R.color.orange);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 5){
+            newBackground.setBackgroundResource(R.color.yellow);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 6){
+            newBackground.setBackgroundResource(R.color.green);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 7){
+            newBackground.setBackgroundResource(R.color.blue);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 8){
+            newBackground.setBackgroundResource(R.color.indigo);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 9){
+            newBackground.setBackgroundResource(R.color.violet);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }else if(pos == 10){
+            newBackground.setBackgroundResource(R.color.brown);
+            if(CurrentLang=="es"){
+                displayColorName(newBackground,pos,text);
+            }else{
+                displayColorName(newBackground,pos,text);
+            }
+        }
 
 
-                
         }
         private void displayColorName(View newBackground,int pos,TextView text){
             String retrieve[] = getResources().getStringArray(R.array.myStrings);
