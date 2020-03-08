@@ -47,14 +47,9 @@ public class ColorAdapter extends BaseAdapter {
     }
 
     public String getElementFromColors(int position){
-        String CurrentLang = Locale.getDefault().getLanguage();
-        if(CurrentLang.equals("es")){
+
             String retrieve[] = context.getResources().getStringArray(R.array.myStrings);
             return retrieve[position];
-        }else{
-            String retrieve[] = context.getResources().getStringArray(R.array.myStrings);
-            return retrieve[position];
-        }
 
 
     }
