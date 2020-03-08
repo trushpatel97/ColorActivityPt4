@@ -30,7 +30,7 @@ public class CanvasActivity extends AppCompatActivity {
         final View newBackground;
         newBackground = this.getWindow().getDecorView();
         System.out.println(Locale.getDefault().getLanguage());
-        newBackground.setBackgroundResource(R.color.white);
+
 
         Intent i = getIntent();
          int pos = i.getIntExtra("position",0);
