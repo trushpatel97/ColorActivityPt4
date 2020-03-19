@@ -40,5 +40,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"></RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="421dp"
+        android:layout_height="362dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondLayout"
+        android:layout_width="416dp"
+        android:layout_height="353dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/firstLayout"
+        app:layout_constraintVertical_bias="0.991"></LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
