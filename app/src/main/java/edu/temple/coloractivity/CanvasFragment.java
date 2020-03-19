@@ -10,6 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.TextView;
+
+import java.util.Locale;
+
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,11 +65,101 @@ public class CanvasFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.fragment_canvas, container, false);
+        String CurrentLang = Locale.getDefault().getLanguage();
+        TextView text = (TextView) view.findViewById(R.id.newColor);
+        Fragment fragment = (Fragment) getFragmentManager().findFragmentById(R.id.secondLayout);
+        final View newBackground;
+        fragment.getView().setBackgroundResource(R.color.white);
+        System.out.println(Locale.getDefault().getLanguage());
+        Bundle b = getArguments();
+        int pos = b.getInt("position");
+        if(pos == 1){
+            fragment.getView().setBackgroundResource(R.color.silver);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 2){
+            fragment.getView().setBackgroundResource(R.color.pink);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 3){
+            fragment.getView().setBackgroundResource(R.color.red);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 4){
+            fragment.getView().setBackgroundResource(R.color.orange);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 5){
+            fragment.getView().setBackgroundResource(R.color.yellow);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 6){
+            fragment.getView().setBackgroundResource(R.color.green);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 7){
+            fragment.getView().setBackgroundResource(R.color.blue);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 8){
+            fragment.getView().setBackgroundResource(R.color.indigo);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 9){
+            fragment.getView().setBackgroundResource(R.color.violet);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }else if(pos == 10){
+            fragment.getView().setBackgroundResource(R.color.brown);
+            if(CurrentLang=="es"){
+                displayColorName(pos,text);
+            }else{
+                displayColorName(pos,text);
+            }
+        }
+        return view;
+    }
+    private void displayColorName(int pos, TextView text){
+        String retrieve[] = getResources().getStringArray(R.array.myStrings);
+        String color = retrieve[pos];
+        text.setText(color);
+    }
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_canvas, container, false);
     }
@@ -75,6 +170,7 @@ public class CanvasFragment extends Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
+
 
     @Override
     public void onAttach(Context context) {
@@ -107,4 +203,3 @@ public class CanvasFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-}

@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".CanvasFragment">
 
+    <fragment
+        android:id="@+id/cFrag"
+        android:name="edu.temple.coloractivity.CanvasFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"

@@ -6,6 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".PaletteActivity">
 
+
+    <RelativeLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="409dp"
+        android:layout_height="351dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="295dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="42dp"
+            android:entries="@array/myStrings"
+            android:popupBackground="#FFFFFF"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondLayout"
+        android:layout_width="409dp"
+        android:layout_height="378dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></RelativeLayout>
+
     <LinearLayout
         android:id="@+id/firstLayout"
         android:layout_width="421dp"
@@ -16,6 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
+
 
     </LinearLayout>
 

@@ -149,7 +149,12 @@ public class PaletteFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
+
+        return view;
+    }
+
+
         return v;
     }
-//
+
 }

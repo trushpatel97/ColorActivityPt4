@@ -1,6 +1,11 @@
 package edu.temple.coloractivity;
-import android.content.Intent;
 import android.os.Bundle;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+
+
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -18,7 +23,11 @@ public class PaletteActivity extends AppCompatActivity {
 
         PaletteFragment PaletteFragment = new PaletteFragment();
         FragmentManager manager = getSupportFragmentManager();
+
+        manager.beginTransaction().replace(R.id.secondLayout,PaletteFragment,PaletteFragment.getTag())
+
         manager.beginTransaction().replace(R.id.firstLayout,PaletteFragment,PaletteFragment.getTag())
+
                 .commit();
     }
 }
