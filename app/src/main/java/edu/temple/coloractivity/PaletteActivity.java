@@ -24,7 +24,7 @@ public class PaletteActivity extends AppCompatActivity {
         PaletteFragment PaletteFragment = new PaletteFragment();
         FragmentManager manager = getSupportFragmentManager();
 
-        manager.beginTransaction().replace(R.id.secondLayout,PaletteFragment,PaletteFragment.getTag())
+        manager.beginTransaction().replace(R.id.secondLayout,PaletteFragment,PaletteFragment.getTag());
 
         manager.beginTransaction().replace(R.id.firstLayout,PaletteFragment,PaletteFragment.getTag())
 
