@@ -152,9 +152,4 @@ public class PaletteFragment extends Fragment {
 
         return view;
     }
-
-
-        return v;
     }
-
-}
